@@ -1,5 +1,4 @@
 'use client'
-import LevelIndicator from "@/components/LevelIndicator";
 import Levels from "@/components/Levels";
 import ProfileAvatar from "@/components/ProfileAvatar";
 import ProgressBar from "@/components/ProgressBar";
