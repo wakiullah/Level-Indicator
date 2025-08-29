@@ -1,8 +1,5 @@
 'use client'
 import { useState } from "react";
-import { Progress } from "./ui/progress";
-import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
 import { toast } from "sonner";
 import ProgressBar from "./ProgressBar";
 
@@ -35,21 +32,12 @@ function LevelIndicator() {
 
     return (
         <div>
-            <div className='text-center'>
-                <h2 className='text-2xl font-semibold mt-2 text-[#636363]'>Body Advocate - <span className="text-[#fb2c36]">Level {currentLevel}</span></h2>
-                <p className="text-md text-gray-600 mt-1" >
-                    You’re a Body Advocate! {totalPoints - currentPoints} more points to <br /> become Fearless Sister 💪
-                </p>
-            </div>
+            
             <div className="mt-5 relative">
                 <ProgressBar progress={progress} currentPoints={currentPoints} totalPoints={totalPoints} level={currentLevel} nextLevel={nextLevel} />
 
             </div>
 
-            <div className="flex gap-5 justify-center mt-16">
-                <Button onClick={handleRemovePoints} variant={'outline'}>Decrease {IncOrDecBy}</Button>
-                <Button onClick={handleAddPoints} variant={'outline'}>Increase {IncOrDecBy}</Button>
-            </div>
 
         </div>
     )
